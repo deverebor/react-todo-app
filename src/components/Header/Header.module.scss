@@ -1,0 +1,23 @@
+.header {
+  background-color: var(--gray-700);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-block: 1.25rem;
+
+  &__logo {
+    width: 1.5rem;
+  }
+
+  &__title {
+    padding-inline-start: 1rem;
+    margin-block-start: 0.2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--brand-purple-dark);
+
+    &__todo {
+      color: var(--brand-blue);
+    }
+  }
+}
