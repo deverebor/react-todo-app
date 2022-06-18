@@ -1,0 +1,26 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+
+  &__created {
+    color: var(--brand-blue);
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  &__completed {
+    color: var(--brand-purple);
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  &__counter {
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+    padding: 0.09rem 0.45rem;
+    border-radius: 16px;
+  }
+}
