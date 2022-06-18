@@ -1,0 +1,9 @@
+.todo {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: calc(-1.5rem - 6px);
+  margin-inline: auto;
+  width: 100%;
+}
