@@ -1,10 +1,13 @@
 import { PlusCircle } from 'phosphor-react'
 import styles from './TodoButton.module.scss'
 
-export function TodoButton() {
+export function TodoButton({ createTask }) {
   return(
     <div className={styles.todo}>
-      <button className={styles.todo__button}>
+      <button
+        onClick={createTask}
+        className={styles.todo__button}
+        >
         Criar
         <PlusCircle size={24} />
       </button>

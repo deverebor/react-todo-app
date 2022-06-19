@@ -2,23 +2,45 @@ import { Trash } from "phosphor-react";
 
 import styles from "./Tasks.module.scss";
 
-export function Tasks() {
+interface TasksProps {
+  content: string;
+  onDeleteTask: (task: string) => void;
+  onCompleteTask: (task: string) => void;
+}
+
+export function Tasks({ content, onDeleteTask, onCompleteTask }: TasksProps) {
+
+  function handleDeleteTask() {
+    onDeleteTask(content);
+  }
+
+  function handleCompleteTask() {
+    onCompleteTask(content);
+  }
+
   return (
     <article className={styles.tasks}>
       <div className={styles.tasks__content}>
-        <input
-          className={styles.tasks__content_checkbox}
-          type="checkbox"
-        />
+        <div className={styles.tasks__content_checkbox}>
+          <input
+            className={styles.tasks__content_checkbox_block}
+            onChange={handleCompleteTask}
+            type="checkbox"
+          />
+        </div>
         <p className={styles.tasks__content_paragraph}>
-          Lorem ipsum dolor sit, amet!
+          {content}
         </p>
       </div>
-      <Trash
+      <button
+        onClick={handleDeleteTask}
         className={styles.tasks__trash}
-        size={24}
-        color="#808080"
-      />
+      >
+        <Trash
+          size={24}
+          color="#808080"
+        />
+      </button>
     </article>
   );
 }
