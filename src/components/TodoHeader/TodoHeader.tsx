@@ -13,9 +13,7 @@ interface TaskProps {
 
 export function TodoHeader({task, setTask, newTask, setNewTask}: TaskProps) {
 
-  function handleCreateNewTask(event: InputEvent) {
-    event.preventDefault();
-
+  function handleCreateNewTask() {
     setTask([...task, newTask]);
     setNewTask('');
   }
