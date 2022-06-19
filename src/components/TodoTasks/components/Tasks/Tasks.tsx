@@ -38,7 +38,6 @@ export function Tasks({ content, onDeleteTask, onCompleteTask }: TasksProps) {
       >
         <Trash
           size={24}
-          color="#808080"
         />
       </button>
     </article>
