@@ -15,26 +15,33 @@
     gap: 0.75rem;
 
     &_checkbox {
-      appearance: none;
-      border: 1px solid var(--brand-blue);
-      padding: 0.50rem;
-      border-radius: 8px;
-      background-color: var(--gray-400);
-    }
+      &_block {
+        cursor: pointer;
+        appearance: none;
+        border: 1px solid var(--brand-blue);
+        padding: 0.50rem;
+        border-radius: 8px;
+        background-color: var(--gray-400);
+      }
 
-    :checked {
-      padding: 0.50rem;
-      background-color: var(--brand-purple);
-      border-radius: 8px;
-    }
-
-    :checked:after {
-      content: '\2714';
-      position: absolute;
-      margin-top: -12px;
-      margin-left: -5px;
-      font-size: 16px;
-      color: var(--gray-100);
+      :hover {
+        background-color: var(--brand-purple-dark);
+      }
+  
+      :checked {
+        padding: 0.50rem;
+        background-color: var(--brand-purple);
+        border-radius: 8px;
+      }
+  
+      :checked:after {
+        content: '\2714';
+        position: absolute;
+        margin-top: -12px;
+        margin-left: -5px;
+        font-size: 16px;
+        color: var(--gray-100);
+      }
     }
 
     &_paragraph {
@@ -46,9 +53,17 @@
 
   &__trash {
     cursor: pointer;
+    background: transparent;
+    color: var(--gray-300);
+    border: none;
+    line-height: 0;
+    border-radius: 4px;
+    transition: color 0.2s;
+
     :hover {
       color: var(--danger);
       background-color: var(--gray-400);
+      border-radius: 4px;
     }
   }
 }
