@@ -2,5 +2,15 @@
   &__content {
     margin: 0 auto;
     max-width: 736px;
+
+    @media (max-width: 768px) {
+      margin-inline: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
   }
 }
