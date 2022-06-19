@@ -1,8 +1,8 @@
 .todo {
-  overflow: hidden;
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 0.5rem;
-  margin-top: calc(-1.5rem - 6px);
   margin-inline: auto;
+  margin-top: calc(-1.5rem - 6px);
+  overflow: hidden;
 }

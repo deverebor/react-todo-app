@@ -8,9 +8,8 @@ interface TaskProps {
   setTask: Dispatch<SetStateAction<string[]>>;
 }
 
-export function TodoTasks({task, setTask}:TaskProps) {
+export function TodoTasks({task, setTask}: TaskProps) {
   const [completedTasks, setCompletedTask] = useState<string[]>([]);
-
 
   function deleteTask(taskToDelete: string) {
     const tasksWhitoutDeleted = task.filter(tasks => {

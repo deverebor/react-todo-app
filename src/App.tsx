@@ -1,11 +1,11 @@
 import { Header } from './components/Header/Header';
 import { TodoHeader } from './components/TodoHeader/TodoHeader';
+import { TodoTasks } from './components/TodoTasks/TodoTasks';
+import { useState } from 'react';
 
 import styles from './App.module.scss';
 
 import './styles/global.module.scss';
-import { TodoTasks } from './components/TodoTasks/TodoTasks';
-import { useState } from 'react';
 
 function App() {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className={styles.todo}>
       <Header />
-      <div className={styles.todo__header}>
+      <div className={styles.todo__content}>
         <TodoHeader 
           task={tasks} 
           setTask={setTasks}
